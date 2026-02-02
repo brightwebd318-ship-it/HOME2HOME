@@ -27,7 +27,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/HOME2HOME">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
