@@ -2,6 +2,8 @@ import "./Home.css";
 import { useNavigate } from "react-router-dom";
 import Footer from "./Footer";
 
+import logo from "../logo.svg";
+
 function Home() {
   const navigate = useNavigate();
 
@@ -23,7 +25,7 @@ function Home() {
       <nav className="navbar">
         <div className="nav-container">
           <div className="logo">
-            <img src="/logo.svg" alt="Home2Home logo" className="site-logo" />
+            <img src={logo} alt="Home2Home logo" className="site-logo" />
             <h2>Home2Home</h2>
           </div>
           <div className="nav-buttons">

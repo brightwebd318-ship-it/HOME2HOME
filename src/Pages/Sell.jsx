@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "./Sell.css";
 import Footer from "./Footer";
 
+import logo from "../logo.svg";
+
 function Sell() {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
@@ -132,7 +134,7 @@ function Sell() {
       <div className="sell-header">
         <div className="header-content">
           <div className="sell-brand">
-            <img src="/logo.svg" alt="Home2Home" className="site-logo-small" />
+            <img src={logo} alt="Home2Home" className="site-logo-small" />
             <h1>Home2Home Seller Dashboard</h1>
           </div>
           <button onClick={handleLogout} className="logout-btn">
@@ -280,9 +282,8 @@ function Sell() {
                     <button
                       key={emoji}
                       type="button"
-                      className={`emoji-btn ${
-                        formData.image === emoji ? "selected" : ""
-                      }`}
+                      className={`emoji-btn ${formData.image === emoji ? "selected" : ""
+                        }`}
                       onClick={() => handleImageSelect(emoji)}
                       title={name}
                     >

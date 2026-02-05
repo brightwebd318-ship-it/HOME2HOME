@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AdminDashboard.css";
+import logo from "../logo.svg";
 
 function AdminDashboard() {
   const navigate = useNavigate();
@@ -170,7 +171,10 @@ function AdminDashboard() {
       <header className="admin-header">
         <div className="admin-header-content">
           <div className="admin-branding">
-            <h1>🛡️ Home2Home Admin Dashboard</h1>
+            <div className="admin-logo-wrapper">
+              <img src={logo} alt="Home2Home" className="admin-logo" />
+              <h1>Home2Home Admin Dashboard</h1>
+            </div>
             <p>Business Analytics & Management</p>
           </div>
           <div className="admin-user-info">

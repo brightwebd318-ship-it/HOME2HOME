@@ -35,14 +35,40 @@
   animation: float-up-login 28s infinite ease-in-out;
 }
 
-.veggie-login-1 { top: 10%; left: 5%; animation-delay: 0s; }
-.veggie-login-2 { top: 60%; right: 10%; animation-delay: 4s; }
-.veggie-login-3 { top: 30%; right: 5%; animation-delay: 8s; }
-.veggie-login-4 { bottom: 20%; left: 20%; animation-delay: 12s; }
+.veggie-login-1 {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.veggie-login-2 {
+  top: 60%;
+  right: 10%;
+  animation-delay: 4s;
+}
+
+.veggie-login-3 {
+  top: 30%;
+  right: 5%;
+  animation-delay: 8s;
+}
+
+.veggie-login-4 {
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 12s;
+}
 
 @keyframes float-up-login {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-70px) rotate(20deg); }
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-70px) rotate(20deg);
+  }
 }
 
 /* ===== Success Modal ===== */
@@ -100,6 +126,7 @@
     opacity: 0;
     transform: scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -111,6 +138,7 @@
     transform: translateY(30px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -118,14 +146,29 @@
 }
 
 @keyframes scaleUp-login {
-  0% { transform: scale(0); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes blink-login {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
 }
 
 /* ===== Alert Error ===== */
@@ -152,6 +195,7 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -179,6 +223,7 @@
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -275,9 +320,19 @@
 }
 
 @keyframes shake-login {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
 }
 
 /* ===== Form Footer (Remember Me & Forgot Password) ===== */
@@ -421,9 +476,10 @@
     gap: 1rem;
   }
 
+  /* Prevent zoom on iOS */
   .form-group-login input {
     padding: 0.8rem 0;
-    font-size: 16px; /* Prevents zoom on mobile */
+    font-size: 16px;
   }
 
   .btn-login-submit {
@@ -431,10 +487,18 @@
     font-size: 1rem;
   }
 
+  /* Improve touch targets and spacing */
   .form-footer {
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
+    margin-top: 1rem;
+  }
+
+  .remember-me,
+  .forgot-password-btn {
+    padding: 0.5rem 0;
+    /* Larger touch target */
   }
 
   .demo-info {

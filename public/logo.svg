@@ -1,14 +1,32 @@
-<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <linearGradient id="g1" x1="0" x2="1">
-      <stop offset="0%" stop-color="#32a852"/>
-      <stop offset="100%" stop-color="#2b8fdb"/>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2ecc71" />
+      <stop offset="100%" stop-color="#3498db" />
     </linearGradient>
+    <filter id="dropshadow" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
+      <feOffset dx="2" dy="2" result="offsetblur"/> <!-- how much to offset -->
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/> <!-- opacity of shadow -->
+      </feComponentTransfer>
+      <feMerge> 
+        <feMergeNode/> <!-- this contains the offset blurred image -->
+        <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+      </feMerge>
+    </filter>
   </defs>
-  <rect width="200" height="200" rx="20" fill="url(#g1)" />
-  <g transform="translate(40,48)">
-    <path d="M20 48 L60 20 L100 48 V86 H20 Z" fill="#fff" />
-    <circle cx="60" cy="60" r="14" fill="#ff6b6b" />
-    <path d="M52 56 C52 50 62 50 62 56 C62 60 58 64 56 66 C54 64 50 60 50 56 Z" fill="#fff" transform="translate(4,0)"/>
-  </g>
+  
+  <!-- House Base -->
+  <path d="M50 10 L90 45 L80 45 L80 85 Q80 90 75 90 L25 90 Q20 90 20 85 L20 45 L10 45 Z" fill="url(#logoGradient)" filter="url(#dropshadow)" />
+  
+  <!-- Leaf Element (Negative Space or Overlay) -->
+  <path d="M50 35 Q65 35 70 50 Q70 70 50 80 Q30 70 30 50 Q35 35 50 35" fill="#ffffff" opacity="0.9" />
+  <path d="M50 35 Q50 60 50 80" stroke="#2ecc71" stroke-width="2" stroke-linecap="round" />
+  <path d="M50 60 L65 50" stroke="#2ecc71" stroke-width="2" stroke-linecap="round" />
+  <path d="M50 65 L35 55" stroke="#2ecc71" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- Chimney with Leaf Sprout -->
+  <path d="M70 25 L70 35" stroke="url(#logoGradient)" stroke-width="4" stroke-linecap="round" />
+  <circle cx="72" cy="22" r="3" fill="#2ecc71" />
 </svg>

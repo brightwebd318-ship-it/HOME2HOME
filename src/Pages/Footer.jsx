@@ -1,5 +1,6 @@
 import "./Footer.css";
 import { useNavigate } from "react-router-dom";
+import logo from "../logo.svg";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,7 +12,7 @@ function Footer() {
         {/* About Section */}
         <div className="footer-section">
           <h3 className="footer-title">
-            <img src="/logo.svg" alt="Home2Home logo" className="footer-logo-img" /> Home2Home
+            <img src={logo} alt="Home2Home logo" className="footer-logo-img" /> Home2Home
           </h3>
           <p className="footer-description">
             Connecting farmers and food enthusiasts through fresh, organic vegetables delivered straight to your door.
